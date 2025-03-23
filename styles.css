@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #1A1A40, #4E148C);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.setup-container, .game-container, .winner-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    width: 350px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FFC300;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.choice-btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choice-btn:hover {
+    background-color: #FFC300;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.score {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.reset-btn {
+    background-color: red;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.reset-btn:hover {
+    background-color: darkred;
+}
+
+.winner-container {
+    text-align: center;
+    color: #FFD700;
+}
+
+.winner-container h1 {
+    font-size: 30px;
+}
+
+.winner-container h2 {
+    font-size: 25px;
+    color: #FFC300;
+}

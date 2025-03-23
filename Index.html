@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="setup-container">
+    <h2>Rock Paper Scissors</h2>
+    
+    <label>Enter Player 1 Name:</label>
+    <input type="text" id="player1Name" placeholder="Player 1">
+
+    <label>Choose Mode:</label>
+    <select id="gameMode" onchange="togglePlayer2Input()">
+        <option value="computer">Play vs Computer</option>
+        <option value="friend">Play with a Friend</option>
+    </select>
+
+    <div id="player2Input" style="display: none;">
+        <label>Enter Player 2 Name:</label>
+        <input type="text" id="player2Name" placeholder="Player 2">
+    </div>
+
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<div class="game-container" style="display: none;">
+    <h2>Rock Paper Scissors</h2>
+    
+    <p id="turnText">Make your move!</p>
+
+    <div class="player-section">
+        <h3 id="player1Display">Player 1 <span id="tick1"></span></h3>
+        <div class="choices">
+            <button class="choice-btn" onclick="playGame('Rock', 1)">🪨 Rock</button>
+            <button class="choice-btn" onclick="playGame('Paper', 1)">📄 Paper</button>
+            <button class="choice-btn" onclick="playGame('Scissors', 1)">✂️ Scissors</button>
+        </div>
+    </div>
+
+    <div id="player2Section" class="player-section">
+        <h3 id="player2Display">Computer <span id="tick2"></span></h3>
+        <div class="choices">
+            <button class="choice-btn" onclick="playGame('Rock', 2)">🪨 Rock</button>
+            <button class="choice-btn" onclick="playGame('Paper', 2)">📄 Paper</button>
+            <button class="choice-btn" onclick="playGame('Scissors', 2)">✂️ Scissors</button>
+        </div>
+    </div>
+
+    <p class="result">Waiting for moves...</p>
+    <p class="score">
+        <span id="player1Score">0</span> - <span id="player2Score">0</span>
+    </p>
+
+    <button class="reset-btn" onclick="resetGame()" style="display: none;">Restart Game</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
